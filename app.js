@@ -35,6 +35,10 @@ alert(numeriRandom);
 const numeriUtente = [];
 console.log(numeriUtente);
 
+// Array contenente i numeri corretti inseriti dall'utente
+const numeriUtenteCorretti = [];
+console.log(numeriUtenteCorretti);
+
 // Dopo 30 secondi chiedo all'utente di inserire i numeri visualizzati dal primo alert
 setTimeout ( function() {
 
@@ -42,5 +46,11 @@ setTimeout ( function() {
         let numUtente = parseInt(prompt("Inserisci un numero visualizzato 30 secondi fa!"));
         numeriUtente.push(numUtente);
     }
+    numeriUtente.forEach((element, index) => {
+        if (numeriRandom.includes(numeriUtente[index])){
+            numeriUtenteCorretti.push(numeriUtente[index]);
+        }
+    });
+    console.log(numeriUtenteCorretti);
 
 }, 30000)
