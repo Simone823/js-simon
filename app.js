@@ -48,7 +48,7 @@ setTimeout ( function() {
         numeriUtente.push(numUtente);
     }
 
-    
+
     numeriUtente.forEach((element, index) => {
 
         // Se l'array numeriRandom include il numero dentro l'array numeriUtente
@@ -59,5 +59,7 @@ setTimeout ( function() {
         }
     });
     console.log(numeriUtenteCorretti);
+
+    alert(`I numeri indovinati sono: ${numeriUtenteCorretti} `);
 
 }, 30000)
